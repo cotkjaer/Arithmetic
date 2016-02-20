@@ -31,10 +31,10 @@ public func pow<F: Powerable>(lhs: F, _ rhs: F) -> F
 }
 
 public func ** (left: Int, right: Int) -> Double { return pow(Double(left), Double(right)) }
-public func ** (left: Double, right: Double) -> Double { return pow(left, right) }
-public func ** (left: Float, right: Float) -> Float { return powf(left, right) }
 
 // MARK: - Double
+
+public func ** (left: Double, right: Double) -> Double { return pow(left, right) }
 
 extension Double : Powerable
 {
@@ -46,6 +46,8 @@ extension Double : Powerable
 }
 
 // MARK: - Float
+
+public func ** (left: Float, right: Float) -> Float { return powf(left, right) }
 
 extension Float : Powerable
 {

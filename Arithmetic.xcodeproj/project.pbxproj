@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8FA7F0BE1C767251001A8DE9 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BD1C767251001A8DE9 /* Int.swift */; };
 		8FA7F0C01C767289001A8DE9 /* Primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BF1C767289001A8DE9 /* Primes.swift */; };
-		8FA7F0C21C7672D0001A8DE9 /* Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C11C7672D0001A8DE9 /* Lerp.swift */; };
 		8FA7F0CA1C767332001A8DE9 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */; };
 		8FA7F0CB1C767332001A8DE9 /* OddEvenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C61C767332001A8DE9 /* OddEvenTests.swift */; };
 		8FA7F0CC1C767332001A8DE9 /* EpsilonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		8FA7F0BD1C767251001A8DE9 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Int.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0BF1C767289001A8DE9 /* Primes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Primes.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		8FA7F0C11C7672D0001A8DE9 /* Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Lerp.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OperatorsTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C61C767332001A8DE9 /* OddEvenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OddEvenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = EpsilonTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -143,7 +141,6 @@
 				8FD876DD1C766F1700181FA6 /* Sum.swift */,
 				8FD876D91C766ED300181FA6 /* Sign.swift */,
 				8FD876E11C766F7B00181FA6 /* Fuzzy.swift */,
-				8FA7F0C11C7672D0001A8DE9 /* Lerp.swift */,
 				8FD876A81C766E3700181FA6 /* Arithmetic.h */,
 				8FD876AA1C766E3700181FA6 /* Info.plist */,
 			);
@@ -292,7 +289,6 @@
 				8FD876C91C766E6200181FA6 /* Multipliable.swift in Sources */,
 				8FD876E21C766F7B00181FA6 /* Fuzzy.swift in Sources */,
 				8FD876D61C766EA200181FA6 /* Rounding.swift in Sources */,
-				8FA7F0C21C7672D0001A8DE9 /* Lerp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
