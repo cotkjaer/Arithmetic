@@ -10,6 +10,7 @@ import Foundation
 
 public protocol ApproximatelyEquatable
 {
+    /// compare `self` to `other` within the given precision, return **true** if they are close enough
     func equalTo(other: Self, within precision: Self) -> Bool
 }
 

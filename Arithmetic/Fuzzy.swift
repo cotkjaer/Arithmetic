@@ -6,27 +6,30 @@
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
 //
 
-// MARK: Fuzzy equality
+// MARK: - Fuzzy equality
 
 public protocol FuzzyEquatable : ApproximatelyEquatable
 {
-    func ==% (lhs: Self, rhs: Self) -> Bool
+    func ≈≈ (lhs: Self, rhs: Self) -> Bool
 }
 
-infix operator ==% { associativity none precedence 130 }
+///Fuzzy equality
+infix operator ≈≈ { associativity none precedence 130 }
 
-// MARK: Fuzzy inequality
 
-infix operator !=% { associativity none precedence 130 }
+// MARK: - Fuzzy inequality
 
-public func !=% <T: FuzzyEquatable> (lhs: T, rhs: T) -> Bool
+///Fuzzy inequality
+infix operator !≈ { associativity none precedence 130 }
+
+public func !≈ <T: FuzzyEquatable> (lhs: T, rhs: T) -> Bool
 {
-    return !(lhs ==% rhs)
+    return !(lhs ≈≈ rhs)
 }
 
 // MARK: Default
 
-public func ==% <F:FloatingPointArithmeticType> (lhs: F, rhs: F) -> Bool
+public func ≈≈ <F:FloatingPointArithmeticType> (lhs: F, rhs: F) -> Bool
 {
     return lhs.equalTo(rhs, within: F.epsilon)
 }
