@@ -16,7 +16,6 @@ public protocol FuzzyEquatable : ApproximatelyEquatable
 ///Fuzzy equality
 infix operator ≈≈ { associativity none precedence 130 }
 
-
 // MARK: - Fuzzy inequality
 
 ///Fuzzy inequality
@@ -33,4 +32,3 @@ public func ≈≈ <F:FloatingPointArithmeticType> (lhs: F, rhs: F) -> Bool
 {
     return lhs.equalTo(rhs, within: F.epsilon)
 }
-

@@ -10,5 +10,3 @@ public protocol ArithmeticType: Subtractable, Addable, Multipliable, Dividable, 
 
 extension Int: ArithmeticType {}
 extension UInt: ArithmeticType {}
-
-

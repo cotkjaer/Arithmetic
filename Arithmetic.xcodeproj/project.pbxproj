@@ -100,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FCE6AF71C7DFE3B0079A587 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FD876A81C766E3700181FA6 /* Arithmetic.h */,
+				8FD876AA1C766E3700181FA6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8FD8769B1C766E3700181FA6 = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +150,7 @@
 				8FD876DD1C766F1700181FA6 /* Sum.swift */,
 				8FD876D91C766ED300181FA6 /* Sign.swift */,
 				8FD876E11C766F7B00181FA6 /* Fuzzy.swift */,
-				8FD876A81C766E3700181FA6 /* Arithmetic.h */,
-				8FD876AA1C766E3700181FA6 /* Info.plist */,
+				8FCE6AF71C7DFE3B0079A587 /* Supporting Files */,
 			);
 			path = Arithmetic;
 			sourceTree = "<group>";
