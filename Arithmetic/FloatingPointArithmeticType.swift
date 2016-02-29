@@ -25,10 +25,7 @@ public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType,
     func equalTo(number: Self, within precision: Self) -> Bool
 }
 
-extension Double : FloatingPointArithmeticType {}
-
 extension Float : FloatingPointArithmeticType {}
-
 
 // MARK: - Constants
 

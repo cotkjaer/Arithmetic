@@ -59,6 +59,17 @@ public extension Roundable where Self : ArithmeticType
 
 extension Double : Roundable
 {
+    /**
+     Round `self` to arbitrary `number`
+     
+     - parameter number: the number to use in rounding
+     */
+    public func rounded(toNearest number: Double) -> Double
+    {
+        let remainder = self % number
+        return remainder < number / 2 ? self - remainder : self - remainder + number
+    }
+    
     /// Largest integral value not greater than `self`
     public var floor : Double { return Foundation.floor(self) }
     
@@ -80,7 +91,3 @@ extension Float : Roundable
     /// Nearest integral value, eaqual to, less than, or greater than `self`
     public var round : Float { return Foundation.roundf(self) }
 }
-
-
-
-

@@ -9,7 +9,10 @@
 public protocol Subtractable
 {
     func - (lhs: Self, rhs: Self) -> Self
+    
     func -= (inout lhs: Self, rhs: Self)
+    
+    prefix func - (_: Self) -> Self
 }
 
 // MARK: - Int Interoperability

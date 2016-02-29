@@ -11,6 +11,8 @@ public protocol Zeroable
     func isZero() -> Bool
 
     static var zero : Self { get }
+    
+    init() // Zero
 }
 
 public extension Zeroable where Self : IntegerLiteralConvertible
