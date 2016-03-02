@@ -26,6 +26,7 @@ public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType,
 }
 
 extension Float : FloatingPointArithmeticType {}
+extension Double : FloatingPointArithmeticType {}
 
 // MARK: - Constants
 

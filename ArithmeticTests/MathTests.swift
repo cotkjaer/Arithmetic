@@ -11,7 +11,6 @@ import XCTest
 
 class MathTests: XCTestCase
 {
-   
     func test_Int_Double_add() {
         
         let d = Double(1)

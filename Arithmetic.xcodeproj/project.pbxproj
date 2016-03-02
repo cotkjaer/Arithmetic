@@ -14,6 +14,8 @@
 		8FA7F0CC1C767332001A8DE9 /* EpsilonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */; };
 		8FA7F0CD1C767332001A8DE9 /* MathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C81C767332001A8DE9 /* MathTests.swift */; };
 		8FA7F0CE1C767332001A8DE9 /* SignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C91C767332001A8DE9 /* SignTests.swift */; };
+		8FCAE93A1C871AD700D69136 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAE9391C871AD700D69136 /* Interpolation.swift */; };
+		8FCAE93C1C871B6600D69136 /* InterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAE93B1C871B6600D69136 /* InterpolationTests.swift */; };
 		8FD876A91C766E3700181FA6 /* Arithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD876A81C766E3700181FA6 /* Arithmetic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD876B01C766E3700181FA6 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD876A51C766E3700181FA6 /* Arithmetic.framework */; };
 		8FD876B51C766E3700181FA6 /* ArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD876B41C766E3700181FA6 /* ArithmeticTests.swift */; };
@@ -55,6 +57,8 @@
 		8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = EpsilonTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C81C767332001A8DE9 /* MathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MathTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C91C767332001A8DE9 /* SignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SignTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8FCAE9391C871AD700D69136 /* Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8FCAE93B1C871B6600D69136 /* InterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolationTests.swift; sourceTree = "<group>"; };
 		8FD876A51C766E3700181FA6 /* Arithmetic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arithmetic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD876A81C766E3700181FA6 /* Arithmetic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
 		8FD876AA1C766E3700181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				8FD876DD1C766F1700181FA6 /* Sum.swift */,
 				8FD876D91C766ED300181FA6 /* Sign.swift */,
 				8FD876E11C766F7B00181FA6 /* Fuzzy.swift */,
+				8FCAE9391C871AD700D69136 /* Interpolation.swift */,
 				8FCE6AF71C7DFE3B0079A587 /* Supporting Files */,
 			);
 			path = Arithmetic;
@@ -158,6 +163,7 @@
 		8FD876B31C766E3700181FA6 /* ArithmeticTests */ = {
 			isa = PBXGroup;
 			children = (
+				8FCAE93B1C871B6600D69136 /* InterpolationTests.swift */,
 				8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */,
 				8FA7F0C61C767332001A8DE9 /* OddEvenTests.swift */,
 				8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */,
@@ -297,6 +303,7 @@
 				8FD876C91C766E6200181FA6 /* Multipliable.swift in Sources */,
 				8FD876E21C766F7B00181FA6 /* Fuzzy.swift in Sources */,
 				8FD876D61C766EA200181FA6 /* Rounding.swift in Sources */,
+				8FCAE93A1C871AD700D69136 /* Interpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCAE93C1C871B6600D69136 /* InterpolationTests.swift in Sources */,
 				8FA7F0CB1C767332001A8DE9 /* OddEvenTests.swift in Sources */,
 				8FA7F0CD1C767332001A8DE9 /* MathTests.swift in Sources */,
 				8FA7F0CE1C767332001A8DE9 /* SignTests.swift in Sources */,
