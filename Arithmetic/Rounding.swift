@@ -27,7 +27,6 @@ public protocol Roundable
     var round : Self { get }
 }
 
-
 // MARK: - Default
 
 public extension Roundable
