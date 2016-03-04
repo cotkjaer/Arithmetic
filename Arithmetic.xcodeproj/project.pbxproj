@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F7712251C89851D00B6B218 /* Overflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7712241C89851D00B6B218 /* Overflow.swift */; };
+		8F7713371C89C4D100B6B218 /* Angles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7713361C89C4D100B6B218 /* Angles.swift */; };
 		8FA7F0BE1C767251001A8DE9 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BD1C767251001A8DE9 /* Int.swift */; };
 		8FA7F0C01C767289001A8DE9 /* Primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BF1C767289001A8DE9 /* Primes.swift */; };
 		8FA7F0CA1C767332001A8DE9 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		8F7712241C89851D00B6B218 /* Overflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overflow.swift; sourceTree = "<group>"; };
+		8F7713361C89C4D100B6B218 /* Angles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angles.swift; sourceTree = "<group>"; };
 		8FA7F0BD1C767251001A8DE9 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Int.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0BF1C767289001A8DE9 /* Primes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Primes.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OperatorsTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -136,29 +138,30 @@
 		8FD876A71C766E3700181FA6 /* Arithmetic */ = {
 			isa = PBXGroup;
 			children = (
-				8F7712241C89851D00B6B218 /* Overflow.swift */,
-				8FD876BF1C766E6200181FA6 /* Zeroable.swift */,
-				8FD876C01C766E6200181FA6 /* Multipliable.swift */,
-				8FD876C11C766E6200181FA6 /* Dividable.swift */,
-				8FD876C21C766E6200181FA6 /* Addable.swift */,
-				8FD876C31C766E6200181FA6 /* Subtractable.swift */,
-				8FD876C41C766E6200181FA6 /* Remainderable.swift */,
-				8FA7F0BF1C767289001A8DE9 /* Primes.swift */,
-				8FD876C51C766E6200181FA6 /* ArithmeticType.swift */,
-				8FD876C61C766E6200181FA6 /* FloatingPointArithmeticType.swift */,
-				8FD876C71C766E6200181FA6 /* GenericIntegerType.swift */,
-				8FD876D11C766E9100181FA6 /* Epsilon.swift */,
-				8FD876D21C766E9100181FA6 /* Absolute.swift */,
-				8FA7F0BD1C767251001A8DE9 /* Int.swift */,
-				8FD876D51C766EA200181FA6 /* Rounding.swift */,
-				8FD876D71C766EAF00181FA6 /* Squared.swift */,
-				8FD876DB1C766EF600181FA6 /* Power.swift */,
-				8FD876DF1C766F7000181FA6 /* Approximate.swift */,
-				8FD876DD1C766F1700181FA6 /* Sum.swift */,
-				8FD876D91C766ED300181FA6 /* Sign.swift */,
-				8FD876E11C766F7B00181FA6 /* Fuzzy.swift */,
-				8FCAE9391C871AD700D69136 /* Interpolation.swift */,
 				8FCE6AF71C7DFE3B0079A587 /* Supporting Files */,
+				8FD876D21C766E9100181FA6 /* Absolute.swift */,
+				8FD876C21C766E6200181FA6 /* Addable.swift */,
+				8F7713361C89C4D100B6B218 /* Angles.swift */,
+				8FD876DF1C766F7000181FA6 /* Approximate.swift */,
+				8FD876C51C766E6200181FA6 /* ArithmeticType.swift */,
+				8FD876C11C766E6200181FA6 /* Dividable.swift */,
+				8FD876D11C766E9100181FA6 /* Epsilon.swift */,
+				8FD876C61C766E6200181FA6 /* FloatingPointArithmeticType.swift */,
+				8FD876E11C766F7B00181FA6 /* Fuzzy.swift */,
+				8FD876C71C766E6200181FA6 /* GenericIntegerType.swift */,
+				8FA7F0BD1C767251001A8DE9 /* Int.swift */,
+				8FCAE9391C871AD700D69136 /* Interpolation.swift */,
+				8FD876C01C766E6200181FA6 /* Multipliable.swift */,
+				8F7712241C89851D00B6B218 /* Overflow.swift */,
+				8FD876DB1C766EF600181FA6 /* Power.swift */,
+				8FA7F0BF1C767289001A8DE9 /* Primes.swift */,
+				8FD876C41C766E6200181FA6 /* Remainderable.swift */,
+				8FD876D51C766EA200181FA6 /* Rounding.swift */,
+				8FD876D91C766ED300181FA6 /* Sign.swift */,
+				8FD876D71C766EAF00181FA6 /* Squared.swift */,
+				8FD876C31C766E6200181FA6 /* Subtractable.swift */,
+				8FD876DD1C766F1700181FA6 /* Sum.swift */,
+				8FD876BF1C766E6200181FA6 /* Zeroable.swift */,
 			);
 			path = Arithmetic;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				8FD876D31C766E9100181FA6 /* Epsilon.swift in Sources */,
 				8F7712251C89851D00B6B218 /* Overflow.swift in Sources */,
 				8FD876E01C766F7000181FA6 /* Approximate.swift in Sources */,
+				8F7713371C89C4D100B6B218 /* Angles.swift in Sources */,
 				8FD876CC1C766E6200181FA6 /* Subtractable.swift in Sources */,
 				8FA7F0C01C767289001A8DE9 /* Primes.swift in Sources */,
 				8FD876CF1C766E6200181FA6 /* FloatingPointArithmeticType.swift in Sources */,

@@ -1,6 +1,6 @@
 //
 //  Overflow.swift
-//  Overflow
+//  Arithmetic
 //
 //  Created by Christian Otkjær on 18/02/16.
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
