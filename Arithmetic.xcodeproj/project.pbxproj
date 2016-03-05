@@ -16,6 +16,7 @@
 		8FA7F0CC1C767332001A8DE9 /* EpsilonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */; };
 		8FA7F0CD1C767332001A8DE9 /* MathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C81C767332001A8DE9 /* MathTests.swift */; };
 		8FA7F0CE1C767332001A8DE9 /* SignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C91C767332001A8DE9 /* SignTests.swift */; };
+		8FBDDAB61C8AF78C007C0B4C /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDDAB51C8AF78C007C0B4C /* RoundingTests.swift */; };
 		8FCAE93A1C871AD700D69136 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAE9391C871AD700D69136 /* Interpolation.swift */; };
 		8FCAE93C1C871B6600D69136 /* InterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAE93B1C871B6600D69136 /* InterpolationTests.swift */; };
 		8FD876A91C766E3700181FA6 /* Arithmetic.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD876A81C766E3700181FA6 /* Arithmetic.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +62,7 @@
 		8FA7F0C71C767332001A8DE9 /* EpsilonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = EpsilonTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C81C767332001A8DE9 /* MathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MathTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C91C767332001A8DE9 /* SignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SignTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8FBDDAB51C8AF78C007C0B4C /* RoundingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		8FCAE9391C871AD700D69136 /* Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
 		8FCAE93B1C871B6600D69136 /* InterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolationTests.swift; sourceTree = "<group>"; };
 		8FD876A51C766E3700181FA6 /* Arithmetic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arithmetic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 				8FA7F0C81C767332001A8DE9 /* MathTests.swift */,
 				8FA7F0C91C767332001A8DE9 /* SignTests.swift */,
 				8FD876B41C766E3700181FA6 /* ArithmeticTests.swift */,
+				8FBDDAB51C8AF78C007C0B4C /* RoundingTests.swift */,
 				8FD876B61C766E3700181FA6 /* Info.plist */,
 			);
 			path = ArithmeticTests;
@@ -326,6 +329,7 @@
 				8FD876B51C766E3700181FA6 /* ArithmeticTests.swift in Sources */,
 				8FA7F0CC1C767332001A8DE9 /* EpsilonTests.swift in Sources */,
 				8FA7F0CA1C767332001A8DE9 /* OperatorsTests.swift in Sources */,
+				8FBDDAB61C8AF78C007C0B4C /* RoundingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

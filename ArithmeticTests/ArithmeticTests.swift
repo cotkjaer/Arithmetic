@@ -13,9 +13,10 @@ class ArithmeticTests: XCTestCase
 {
     func test_angle_normalize()
     {
-        let d = 1293.12
+        let d = Double.π2
         
-        XCTAssertGreaterThan(0, d.normalized())
-        XCTAssertLessThan(Double.π2, d.normalized())
+        XCTAssertEqual(0, d.normalized())
+    
+        XCTAssertEqual(0, (d * 2).normalized())
     }
 }

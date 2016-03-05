@@ -25,11 +25,16 @@ public protocol Roundable
     
     /// Nearest integral value, eaqual to, less than, or greater than `self`
     var round : Self { get }
+    
+    /// `self` rounded to a given number of decimals
+    func rounded(toDecimals decimals: Int) -> Self
+    
+    mutating func round(toDecimals decimals: Int)
 }
 
 // MARK: - Default
 
-public extension Roundable
+public extension Roundable where Self : FloatingPointArithmeticType
 {
     /**
      Round `self` to arbitrary number
@@ -39,6 +44,16 @@ public extension Roundable
     mutating func round(toNearest number: Self)
     {
         self = rounded(toNearest: number)
+    }
+    
+    func rounded(toDecimals decimals: Int = 0) -> Self
+    {
+        return Arithmetic.round(self, toDecimals: decimals)
+    }
+    
+    mutating func round(toDecimals decimals: Int = 0)
+    {
+        self = rounded(toDecimals: decimals)
     }
 }
 
@@ -55,6 +70,25 @@ public extension Roundable where Self : ArithmeticType
         return remainder < number / 2 ? self - remainder : self - remainder + number
     }
 }
+
+//MARK: - Round to number of decimals
+
+public func round<F: FloatingPointArithmeticType>(f: F, toDecimals: Int = 0) -> F
+{
+    let decimals = max(0, toDecimals)
+    
+    if decimals == 0
+    {
+        return f.round
+    }
+    else
+    {
+        let factor = pow(10, F(decimals))
+        
+        return (f * factor).round / factor
+    }
+}
+
 
 extension Double : Roundable
 {
