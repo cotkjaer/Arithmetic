@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F7712251C89851D00B6B218 /* Overflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7712241C89851D00B6B218 /* Overflow.swift */; };
 		8F7713371C89C4D100B6B218 /* Angles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7713361C89C4D100B6B218 /* Angles.swift */; };
+		8F97AD4B1CEEFD00002DF85C /* Formattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97AD4A1CEEFD00002DF85C /* Formattable.swift */; };
+		8F97AD4D1CEF006C002DF85C /* FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97AD4C1CEF006C002DF85C /* FormatTests.swift */; };
 		8FA7F0BE1C767251001A8DE9 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BD1C767251001A8DE9 /* Int.swift */; };
 		8FA7F0C01C767289001A8DE9 /* Primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0BF1C767289001A8DE9 /* Primes.swift */; };
 		8FA7F0CA1C767332001A8DE9 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		8F7712241C89851D00B6B218 /* Overflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overflow.swift; sourceTree = "<group>"; };
 		8F7713361C89C4D100B6B218 /* Angles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angles.swift; sourceTree = "<group>"; };
+		8F97AD4A1CEEFD00002DF85C /* Formattable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formattable.swift; sourceTree = "<group>"; };
+		8F97AD4C1CEF006C002DF85C /* FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatTests.swift; sourceTree = "<group>"; };
 		8FA7F0BD1C767251001A8DE9 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Int.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0BF1C767289001A8DE9 /* Primes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Primes.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FA7F0C51C767332001A8DE9 /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OperatorsTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -164,6 +168,7 @@
 				8FD876C31C766E6200181FA6 /* Subtractable.swift */,
 				8FD876DD1C766F1700181FA6 /* Sum.swift */,
 				8FD876BF1C766E6200181FA6 /* Zeroable.swift */,
+				8F97AD4A1CEEFD00002DF85C /* Formattable.swift */,
 			);
 			path = Arithmetic;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				8FA7F0C91C767332001A8DE9 /* SignTests.swift */,
 				8FD876B41C766E3700181FA6 /* ArithmeticTests.swift */,
 				8FBDDAB51C8AF78C007C0B4C /* RoundingTests.swift */,
+				8F97AD4C1CEF006C002DF85C /* FormatTests.swift */,
 				8FD876B61C766E3700181FA6 /* Info.plist */,
 			);
 			path = ArithmeticTests;
@@ -313,6 +319,7 @@
 				8FD876CE1C766E6200181FA6 /* ArithmeticType.swift in Sources */,
 				8FD876C91C766E6200181FA6 /* Multipliable.swift in Sources */,
 				8FD876E21C766F7B00181FA6 /* Fuzzy.swift in Sources */,
+				8F97AD4B1CEEFD00002DF85C /* Formattable.swift in Sources */,
 				8FD876D61C766EA200181FA6 /* Rounding.swift in Sources */,
 				8FCAE93A1C871AD700D69136 /* Interpolation.swift in Sources */,
 			);
@@ -324,6 +331,7 @@
 			files = (
 				8FCAE93C1C871B6600D69136 /* InterpolationTests.swift in Sources */,
 				8FA7F0CB1C767332001A8DE9 /* OddEvenTests.swift in Sources */,
+				8F97AD4D1CEF006C002DF85C /* FormatTests.swift in Sources */,
 				8FA7F0CD1C767332001A8DE9 /* MathTests.swift in Sources */,
 				8FA7F0CE1C767332001A8DE9 /* SignTests.swift in Sources */,
 				8FD876B51C766E3700181FA6 /* ArithmeticTests.swift in Sources */,
