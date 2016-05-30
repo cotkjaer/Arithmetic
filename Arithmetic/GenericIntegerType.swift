@@ -94,7 +94,8 @@ func integerWithBytes<T: GenericIntegerType where T: UnsignedIntegerType, T: Gen
     
     var i:UIntMax = 0
     
-    for var j = 0; j < maxBytes; j++
+    
+    for j in 0 ..< maxBytes
     {
         i = i | T(bytes[j]).toUIntMax() << UIntMax(j * 8)
     }
@@ -109,7 +110,7 @@ func integerWithBytes<T: GenericIntegerType where T: SignedIntegerType, T:  Gene
     let maxBytes = sizeof(T)
     var i:IntMax = 0
     
-    for var j = 0; j < maxBytes; j++
+    for j in 0 ..< maxBytes
     {
         i = i | T(bitPattern: UIntMax(bytes[j].toUIntMax())).toIntMax() << (j * 8).toIntMax()
     }

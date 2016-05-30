@@ -42,6 +42,7 @@
 		8FD876DE1C766F1700181FA6 /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD876DD1C766F1700181FA6 /* Sum.swift */; };
 		8FD876E01C766F7000181FA6 /* Approximate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD876DF1C766F7000181FA6 /* Approximate.swift */; };
 		8FD876E21C766F7B00181FA6 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD876E11C766F7B00181FA6 /* Fuzzy.swift */; };
+		8FE664841CEF4069003AD6BC /* AbsoluteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE664831CEF4069003AD6BC /* AbsoluteTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		8FD876DD1C766F1700181FA6 /* Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Sum.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FD876DF1C766F7000181FA6 /* Approximate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Approximate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FD876E11C766F7B00181FA6 /* Fuzzy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Fuzzy.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8FE664831CEF4069003AD6BC /* AbsoluteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsoluteTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				8FD876B41C766E3700181FA6 /* ArithmeticTests.swift */,
 				8FBDDAB51C8AF78C007C0B4C /* RoundingTests.swift */,
 				8F97AD4C1CEF006C002DF85C /* FormatTests.swift */,
+				8FE664831CEF4069003AD6BC /* AbsoluteTest.swift */,
 				8FD876B61C766E3700181FA6 /* Info.plist */,
 			);
 			path = ArithmeticTests;
@@ -333,6 +336,7 @@
 				8FA7F0CB1C767332001A8DE9 /* OddEvenTests.swift in Sources */,
 				8F97AD4D1CEF006C002DF85C /* FormatTests.swift in Sources */,
 				8FA7F0CD1C767332001A8DE9 /* MathTests.swift in Sources */,
+				8FE664841CEF4069003AD6BC /* AbsoluteTest.swift in Sources */,
 				8FA7F0CE1C767332001A8DE9 /* SignTests.swift in Sources */,
 				8FD876B51C766E3700181FA6 /* ArithmeticTests.swift in Sources */,
 				8FA7F0CC1C767332001A8DE9 /* EpsilonTests.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
 //
 
-public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType, IntegerConvertible, Squarable, Roundable, FloatLiteralConvertible, FuzzyEquatable, Powerable
+public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType, IntegerConvertible, Squarable, Roundable, FloatLiteralConvertible, FuzzyEquatable, Powerable, SignedNumberType
 {
     // MARK: - Constants
     
