@@ -12,38 +12,59 @@ public let PrimesLessThan1000 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
 
 private var primes = Set(PrimesLessThan1000)
 
+extension Collection where Index: Integer, Index.Stride : Integer
+{
+    /// Finds such index N that predicate is true for all elements up to
+    /// but not including the index N, and is false for all elements
+    /// starting with index N.
+    /// Behavior is undefined if there is no such N.
+    func binarySearch(predicate: (Generator.Element) -> Bool) -> Index?
+    {
+        var low = startIndex
+        var high = endIndex
+    
+        while low < high
+        {
+            let mid = low.advanced(by:low.distance(to: high) / 2)
+            
+            if predicate(self[mid])
+            {
+                low = mid.advanced(by: 1)
+            }
+            else
+            {
+                high = mid
+            }
+        }
+        
+        guard low < high else { return nil }
+        
+        return low
+    }
+}
+
 extension Int
 {
     public var prime : Bool
+    {
+        if primes.contains(self) { return true }
+        
+        guard self > 1000 else { return false }
+        
+        guard self % 2 != 0 else { return false }
+        
+        guard self % 3 != 0 else { return false }
+        
+        let limit = Int(Double(self).squareroot.floor)
+        
+        for i in Swift.stride(from: 5, to: limit, by: 6)
         {
-            if primes.contains(self) { return true }
-            
-            guard self > 1000 else { return false }
-            
-//            if self <= 1 { return false }
-//                
-//            else if self <= 3 { return true }
+            if self % i == 0 { return false }
+            if self % (i + 2) == 0 { return false }
+        }
 
-            guard self % 2 != 0 else { return false }
-
-            guard self % 3 != 0 else { return false }
-            
-            let limit = Int(Double(self).squareroot.floor)
-            
-            for i in 5.stride(to: limit, by: 6)
-            {
-                if self % i == 0 { return false }
-                if self % (i + 2) == 0 { return false }
-            }
-            
-//            for var i = 5 ; i * i < self ; i += 6
-//            {
-//                if self % i == 0 { return false }
-//                if self % (i + 2) == 0 { return false }
-//            }
-            
-            primes.insert(self)
-            
-            return true
+        primes.insert(self)
+        
+        return true
     }
 }

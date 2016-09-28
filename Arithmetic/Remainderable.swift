@@ -8,5 +8,5 @@
 
 public protocol Remainderable
 {
-    func % (lhs: Self, rhs: Self) -> Self
+    static func % (lhs: Self, rhs: Self) -> Self
 }

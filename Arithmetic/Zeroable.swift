@@ -15,7 +15,7 @@ public protocol Zeroable
     init() // Zero
 }
 
-public extension Zeroable where Self : IntegerLiteralConvertible
+public extension Zeroable where Self : ExpressibleByIntegerLiteral
 {
     static var zero : Self { return 0 }
 }

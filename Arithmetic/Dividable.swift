@@ -8,23 +8,23 @@
 
 public protocol Dividable
 {
-    func / (lhs: Self, rhs: Self) -> Self
-    func /= (inout lhs: Self, rhs: Self)
+    static func / (lhs: Self, rhs: Self) -> Self
+    static func /= (lhs: inout Self, rhs: Self)
 }
 
 // MARK: - Int Interoperability
 
-public func / <F:Dividable where F:IntegerConvertible>(lhs: F, rhs: Int) -> F
+public func / <F:Dividable>(lhs: F, rhs: Int) -> F where F:IntegerConvertible
 {
     return lhs / F(rhs)
 }
 
-public func / <F:Dividable where F:IntegerConvertible>(lhs: Int, rhs: F) -> F
+public func / <F:Dividable>(lhs: Int, rhs: F) -> F where F:IntegerConvertible
 {
     return F(lhs) / rhs
 }
 
-public func /= <F:Dividable where F:IntegerConvertible>(inout lhs: F, rhs: Int)
+public func /= <F:Dividable>(lhs: inout F, rhs: Int) where F:IntegerConvertible
 {
     return lhs /= F(rhs)
 }

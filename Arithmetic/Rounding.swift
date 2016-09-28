@@ -73,7 +73,7 @@ public extension Roundable where Self : ArithmeticType
 
 //MARK: - Round to number of decimals
 
-public func round<F: FloatingPointArithmeticType>(f: F, toDecimals: Int = 0) -> F
+public func round<F: FloatingPointArithmeticType>(_ f: F, toDecimals: Int = 0) -> F
 {
     let decimals = max(0, toDecimals)
     
@@ -99,7 +99,7 @@ extension Double : Roundable
      */
     public func rounded(toNearest number: Double) -> Double
     {
-        let remainder = self % number
+        let remainder = self.truncatingRemainder(dividingBy: number)
         return remainder < number / 2 ? self - remainder : self - remainder + number
     }
     

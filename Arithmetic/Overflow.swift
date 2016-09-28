@@ -8,19 +8,19 @@
 
 
 /// add lhs and rhs and assign to lhs, silently discarding any overflow.
-infix operator &+= { associativity right precedence 90 }
+infix operator &+= : AssignmentPrecedence//{ associativity right precedence 90 }
 
 /// add lhs and rhs and assign to lhs, silently discarding any overflow.
-func &+= <T : IntegerArithmeticType> (inout lhs: T, rhs: T)
+func &+= <T : IntegerArithmetic> (lhs: inout T, rhs: T)
 {
     lhs = lhs &+ rhs
 }
 
 /// subtract rhs from lhs and assign to lhs, silently discarding any overflow.
-infix operator &-= { associativity right precedence 90 }
+infix operator &-= : AssignmentPrecedence//{ associativity right precedence 90 }
 
 /// subtract rhs from lhs and assign to lhs, silently discarding any overflow.
-func &-= <T : IntegerArithmeticType> (inout lhs: T, rhs: T)
+func &-= <T : IntegerArithmetic> (lhs: inout T, rhs: T)
 {
     lhs = lhs &- rhs
 }

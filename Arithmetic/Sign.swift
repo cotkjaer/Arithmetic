@@ -10,17 +10,17 @@ import CoreGraphics
 
 // MARK: - Sign
 
-public extension Comparable where Self : IntegerLiteralConvertible
+public extension Comparable where Self : ExpressibleByIntegerLiteral
 {
     public var sign : Self { return self < 0 ? -1 : 1 }
 }
 
-public func sign<N:IntegerLiteralConvertible where N:Comparable>(n: N) -> N
+public func sign<N:ExpressibleByIntegerLiteral>(_ n: N) -> N where N:Comparable
 {
     return n < 0 ? -1 : 1
 }
 
-public func sameSign<N:IntegerLiteralConvertible where N:Comparable>(lhs: N, _ rhs: N) -> Bool
+public func sameSign<N:ExpressibleByIntegerLiteral>(_ lhs: N, _ rhs: N) -> Bool where N:Comparable
 {
     return sign(lhs) == sign(rhs)
 }

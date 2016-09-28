@@ -6,7 +6,7 @@
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
 //
 
-public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType, IntegerConvertible, Squarable, Roundable, FloatLiteralConvertible, FuzzyEquatable, Powerable, SignedNumberType
+public protocol FloatingPointArithmeticType : FloatingPoint, ArithmeticType, IntegerConvertible, Squarable, Roundable, ExpressibleByFloatLiteral, FuzzyEquatable, Powerable, SignedNumber
 {
     // MARK: - Constants
     
@@ -22,7 +22,7 @@ public protocol FloatingPointArithmeticType : FloatingPointType, ArithmeticType,
     static var π_4 : Self { get }
     static var π_8 : Self { get }
     
-    func equalTo(number: Self, within precision: Self) -> Bool
+    func equalTo(_ number: Self, within precision: Self) -> Bool
 }
 
 extension Float : FloatingPointArithmeticType {}

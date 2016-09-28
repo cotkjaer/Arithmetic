@@ -42,7 +42,7 @@ public extension Int
     - parameter n:
     - returns: Greatest common divisor
     */
-    public func gcd(n: Int) -> Int
+    public func gcd(_ n: Int) -> Int
     {
         return n == 0 ? self : n.gcd(self % n)
     }
@@ -53,7 +53,7 @@ public extension Int
     - parameter n:
     - returns: Least common multiple
     */
-    public func lcm(n: Int) -> Int
+    public func lcm(_ n: Int) -> Int
     {
         return (self * n).absolute / gcd(n)
     }

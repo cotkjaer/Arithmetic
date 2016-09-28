@@ -7,7 +7,7 @@
 //
 
 /// LERP operator (◊ made with alt-shift-v)
-infix operator ◊ { associativity left precedence 160 }
+infix operator ◊ : MultiplicationPrecedence// LeftAssociativity//{ associativity left precedence 160 }
 
 /// Basic linear interpolation between two floating-point values
 public func ◊ <F: FloatingPointArithmeticType> (ab: (F, F), t: F) -> F

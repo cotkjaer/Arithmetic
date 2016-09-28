@@ -6,7 +6,7 @@
 //  Copyright © 2015 Christian Otkjær. All rights reserved.
 //
 
-protocol GenericIntegerType: IntegerType
+protocol GenericIntegerType: Integer
 {
     init(_ v: Int)
     init(_ v: UInt)
@@ -86,11 +86,11 @@ extension UInt64:GenericIntegerType, GenericUnsignedIntegerBitPattern
     }
 }
 
-func integerWithBytes<T: GenericIntegerType where T: UnsignedIntegerType, T: GenericUnsignedIntegerBitPattern>(bytes:[UInt8]) -> T?
+func integerWithBytes<T: GenericIntegerType>(_ bytes:[UInt8]) -> T? where T: UnsignedInteger, T: GenericUnsignedIntegerBitPattern
 {
-    if bytes.count < sizeof(T) { return nil }
+    if bytes.count < MemoryLayout<T>.size { return nil }
     
-    let maxBytes = sizeof(T)
+    let maxBytes = MemoryLayout<T>.size
     
     var i:UIntMax = 0
     
@@ -103,11 +103,11 @@ func integerWithBytes<T: GenericIntegerType where T: UnsignedIntegerType, T: Gen
     return T(truncatingBitPattern: i)
 }
 
-func integerWithBytes<T: GenericIntegerType where T: SignedIntegerType, T:  GenericSignedIntegerBitPattern>(bytes:[UInt8]) -> T?
+func integerWithBytes<T: GenericIntegerType>(_ bytes:[UInt8]) -> T? where T: SignedInteger, T:  GenericSignedIntegerBitPattern
 {
-    if (bytes.count < sizeof(T)) { return nil }
+    if (bytes.count < MemoryLayout<T>.size) { return nil }
     
-    let maxBytes = sizeof(T)
+    let maxBytes = MemoryLayout<T>.size
     var i:IntMax = 0
     
     for j in 0 ..< maxBytes

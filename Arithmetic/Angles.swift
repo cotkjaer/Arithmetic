@@ -9,8 +9,8 @@
 // MARK: - Sinus
 
 ///Sine function
-@warn_unused_result
-public func sin<F: FloatingPointArithmeticType>(f: F) -> F
+
+public func sin<F: FloatingPointArithmeticType>(_ f: F) -> F
 {
     if let d = f as? Double, let s = sin(d) as? F
     {
@@ -25,14 +25,14 @@ public func sin<F: FloatingPointArithmeticType>(f: F) -> F
         return s
     }
     
-    fatalError("cannot get sin for \(f.dynamicType)")
+    fatalError("cannot get sin for \(type(of: f))")
 }
 
 // MARK: - Cosinus
 
 ///Cosine function
-@warn_unused_result
-public func cos<F: FloatingPointArithmeticType>(f: F) -> F
+
+public func cos<F: FloatingPointArithmeticType>(_ f: F) -> F
 {
     if let d = f as? Double, let s = cos(d) as? F
     {
@@ -47,14 +47,14 @@ public func cos<F: FloatingPointArithmeticType>(f: F) -> F
         return s
     }
     
-    fatalError("cannot get cos for \(f.dynamicType)")
+    fatalError("cannot get cos for \(type(of: f))")
 }
 
 // MARK: - Tangent
 
 ///Tangent function
-@warn_unused_result
-public func tan<F: FloatingPointArithmeticType>(f: F) -> F
+
+public func tan<F: FloatingPointArithmeticType>(_ f: F) -> F
 {
     if let d = f as? Double, let s = tan(d) as? F
     {
@@ -69,12 +69,12 @@ public func tan<F: FloatingPointArithmeticType>(f: F) -> F
         return s
     }
     
-    fatalError("cannot get tan for \(f.dynamicType)")
+    fatalError("cannot get tan for \(type(of: f))")
 }
 
 ///Arc tangent function of two variables
-@warn_unused_result
-public func atan2<F: FloatingPointArithmeticType>(x: F, _ y:F) -> F
+
+public func atan2<F: FloatingPointArithmeticType>(_ x: F, _ y:F) -> F
 {
     if let x = x as? Double, let y = y as? Double, let r = atan2(x,y) as? F
     {
@@ -91,7 +91,7 @@ public func atan2<F: FloatingPointArithmeticType>(x: F, _ y:F) -> F
         return r
     }
     
-    fatalError("cannot get tan for \(x.dynamicType)")
+    fatalError("cannot get tan for \(type(of: x))")
 }
 
 // MARK: - Normalize
@@ -123,30 +123,30 @@ exactly, the result interval is **closed**, it cannot be half-closed
 as would be more satisfactory in a purely mathematical view.
 
 */
-@warn_unused_result
-public func normalizeAngle<F:FloatingPointArithmeticType>(φ : F, _ Φ: F = F.π) -> F
+
+public func normalizeAngle<F:FloatingPointArithmeticType>(_ φ : F, _ Φ: F = F.π) -> F
 {
     let a = ((φ + F.π - Φ) / F.π2).floor
     return φ - F.π2 * a
 }
 
 /// Normalizes angle to be in ]-π;π]
-@warn_unused_result
-public func normalizeRadians<F:FloatingPointArithmeticType>(φ: F) -> F
+
+public func normalizeRadians<F:FloatingPointArithmeticType>(_ φ: F) -> F
 {
     return φ - ( φ / F.π2 - 0.5 ).ceil * F.π2
 }
 
 /// Transform degrees to radians
-@warn_unused_result
-public func degrees2radians<F:FloatingPointArithmeticType>(degrees: F) -> F
+
+public func degrees2radians<F:FloatingPointArithmeticType>(_ degrees: F) -> F
 {
     return (degrees * F.π) / 180
 }
 
 /// Transform radians to degrees
-@warn_unused_result
-public func radians2degrees<F:FloatingPointArithmeticType>(radians: F) -> F
+
+public func radians2degrees<F:FloatingPointArithmeticType>(_ radians: F) -> F
 {
     return (radians * 180) / F.π
 }
@@ -161,8 +161,8 @@ public extension FloatingPointArithmeticType
         
     /// - note: Assumes `self` is in radians
     /// Normalizes angle to be in ]φ-π;φ+π]
-    @warn_unused_result
-    func normalized(φ: Self = Self.π) -> Self
+    
+    func normalized(_ φ: Self = Self.π) -> Self
     {
         if φ == 0
         {

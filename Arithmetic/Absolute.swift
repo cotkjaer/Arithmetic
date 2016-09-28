@@ -17,8 +17,8 @@ public extension AbsoluteValuable
 
 extension Int : AbsoluteValuable
 {
-    @warn_unused_result
-    public static func abs(x: Int) -> Int
+    
+    public static func abs(_ x: Int) -> Int
     {
         return Swift.abs(x)
     }
@@ -28,8 +28,8 @@ extension Int : AbsoluteValuable
 
 extension UInt : AbsoluteValuable
 {
-    @warn_unused_result
-    public static func abs(x: UInt) -> UInt
+    
+    public static func abs(_ x: UInt) -> UInt
     {
         return x
     }

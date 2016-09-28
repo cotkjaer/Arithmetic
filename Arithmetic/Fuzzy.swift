@@ -10,16 +10,17 @@
 
 public protocol FuzzyEquatable : ApproximatelyEquatable
 {
-    func ≈≈ (lhs: Self, rhs: Self) -> Bool
+    static func ≈≈ (lhs: Self, rhs: Self) -> Bool
 }
 
 ///Fuzzy equality
-infix operator ≈≈ { associativity none precedence 130 }
+infix operator ≈≈ : ComparisonPrecedence
+//infix operator ≈≈ { associativity none precedence 130 }
 
 // MARK: - Fuzzy inequality
 
 ///Fuzzy inequality
-infix operator !≈ { associativity none precedence 130 }
+infix operator !≈ : ComparisonPrecedence //{ associativity none precedence 130 }
 
 public func !≈ <T: FuzzyEquatable> (lhs: T, rhs: T) -> Bool
 {

@@ -8,11 +8,11 @@
 
 public protocol Subtractable
 {
-    func - (lhs: Self, rhs: Self) -> Self
+    static func - (lhs: Self, rhs: Self) -> Self
     
-    func -= (inout lhs: Self, rhs: Self)
+    static func -= (lhs: inout Self, rhs: Self)
     
-    prefix func - (_: Self) -> Self
+    static prefix func - (_: Self) -> Self
 }
 
 // MARK: - Optional
@@ -31,7 +31,7 @@ public func - <S: Subtractable>(lhs : S?, rhs: S) -> S
     return lhs - rhs
 }
 
-func -= <S: Subtractable>(inout lhs : S, rhs: S?)
+func -= <S: Subtractable>(lhs : inout S, rhs: S?)
 {
     guard let rhs = rhs else { return }
     
@@ -40,17 +40,17 @@ func -= <S: Subtractable>(inout lhs : S, rhs: S?)
 
 // MARK: - Int Interoperability
 
-public func - <F:Subtractable where F:IntegerConvertible>(lhs: F, rhs: Int) -> F
+public func - <F:Subtractable>(lhs: F, rhs: Int) -> F where F:IntegerConvertible
 {
     return lhs - F(rhs)
 }
 
-public func - <F:Subtractable where F:IntegerConvertible>(lhs: Int, rhs: F) -> F
+public func - <F:Subtractable>(lhs: Int, rhs: F) -> F where F:IntegerConvertible
 {
     return F(lhs) - rhs
 }
 
-public func -= <F:Subtractable where F:IntegerConvertible>(inout lhs: F, rhs: Int)
+public func -= <F:Subtractable>(lhs: inout F, rhs: Int) where F:IntegerConvertible
 {
     return lhs -= F(rhs)
 }

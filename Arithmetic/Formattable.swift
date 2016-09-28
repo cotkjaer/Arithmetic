@@ -8,19 +8,19 @@
 
 import Foundation
 
-public protocol FormattableFloatingPointType : FloatingPointType
+public protocol FormattableFloatingPointType : FloatingPoint
 {
-    func formatted(fractionDigits: Int) -> String
+    func formatted(_ fractionDigits: Int) -> String
 }
 
 // MARK: - Format
 
-extension NSNumberFormatter
+extension NumberFormatter
 {
     convenience init(decimalNumberWithFractionDigits fractionDigits: Int)
     {
         self.init()
-        numberStyle = .DecimalStyle
+        numberStyle = .decimal
         minimumFractionDigits = fractionDigits
         maximumFractionDigits = fractionDigits
     }
@@ -28,23 +28,23 @@ extension NSNumberFormatter
 
 extension CGFloat : FormattableFloatingPointType
 {
-    public func formatted(fractionDigits: Int = 2) -> String
+    public func formatted(_ fractionDigits: Int = 2) -> String
     {
-        return NSNumberFormatter(decimalNumberWithFractionDigits: fractionDigits).stringFromNumber(self) ?? String(self)
+        return Double(self).formatted(fractionDigits)
     }
 }
 
 extension Float : FormattableFloatingPointType
 {
-    public func formatted(fractionDigits: Int = 3) -> String
+    public func formatted(_ fractionDigits: Int = 3) -> String
     {
-        return NSNumberFormatter(decimalNumberWithFractionDigits: fractionDigits).stringFromNumber(self) ?? String(self)
+        return NumberFormatter(decimalNumberWithFractionDigits: fractionDigits).string(from: NSNumber(value: self)) ?? String(self)
     }
 }
 extension Double : FormattableFloatingPointType
 {
-    public func formatted(fractionDigits: Int = 4) -> String
+    public func formatted(_ fractionDigits: Int = 4) -> String
     {
-        return NSNumberFormatter(decimalNumberWithFractionDigits: fractionDigits).stringFromNumber(self) ?? String(self)
+        return NumberFormatter(decimalNumberWithFractionDigits: fractionDigits).string(from: NSNumber(value: self)) ?? String(self)
     }
 }

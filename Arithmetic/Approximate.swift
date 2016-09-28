@@ -11,14 +11,14 @@ import Foundation
 public protocol ApproximatelyEquatable
 {
     /// compare `self` to `other` within the given precision, return **true** if they are close enough
-    func equalTo(other: Self, within precision: Self) -> Bool
+    func equalTo(_ other: Self, within precision: Self) -> Bool
 }
 
 // MARK: - Default
 
 public extension ApproximatelyEquatable where Self:Comparable, Self:Subtractable, Self:AbsoluteValuable
 {
-    func equalTo(other: Self, within precision: Self) -> Bool
+    func equalTo(_ other: Self, within precision: Self) -> Bool
     {
         return abs(self - other) <= abs(precision)
     }
@@ -26,7 +26,7 @@ public extension ApproximatelyEquatable where Self:Comparable, Self:Subtractable
 
 //MARK: - Approximate equals
 
-public func approximatelyEqual<C:Comparable where C:Subtractable, C:AbsoluteValuable>(lhs: C, _ rhs: C, accuracy: C) -> Bool
+public func approximatelyEqual<C:Comparable>(_ lhs: C, _ rhs: C, accuracy: C) -> Bool where C:Subtractable, C:AbsoluteValuable
 {
     return abs(rhs - lhs) <= abs(accuracy)
 }
