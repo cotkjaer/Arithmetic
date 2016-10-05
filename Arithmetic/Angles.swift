@@ -159,10 +159,16 @@ public extension FloatingPointArithmeticType
     /// Assumes `self` is in radians
     public var asDegrees : Self { return (self * 180) / Self.π }
         
+    
+    /// Normalizes angle to be in ]0;2π]
+    func normalized() -> Self
+    {
+        return normalized(φ: Self.π)
+    }
+    
     /// - note: Assumes `self` is in radians
     /// Normalizes angle to be in ]φ-π;φ+π]
-    
-    func normalized(_ φ: Self = Self.π) -> Self
+    func normalized(φ: Self) -> Self
     {
         if φ == 0
         {
