@@ -16,25 +16,25 @@ public protocol IntegerConvertible
 public extension Int
 {
     /**
-    Checks if a number is even.
+    Checks if `self` is even.
     
     - returns: **true** if self is even
     */
-    var even: Bool { return (self % 2) == 0 }
+    var isEven: Bool { return (self % 2) == 0 }
     
     /**
-    Checks if a number is odd.
+    Checks if `self` is odd.
     
     - returns: true if self is odd
     */
-    var odd: Bool { return !even }
+    var isOdd: Bool { return !isEven }
     
     /**
     Returns an array of `Int` containing the digits in self.
     
     - returns: Array of digits
     */
-    var digits: [Int] { return String(self).characters.flatMap { Int(String($0)) } }
+    var digits: [Int] { return String(self).flatMap { Int(String($0)) } }
     
     /**
     Calculates greatest common divisor (GCD) of self and n.
@@ -55,7 +55,7 @@ public extension Int
     */
     public func lcm(_ n: Int) -> Int
     {
-        return (self * n).absolute / gcd(n)
+        return abs(self * n) / gcd(n)
     }
     
     /**
@@ -63,8 +63,5 @@ public extension Int
     
     - returns: Factorial
     */
-    var factorial: Int
-        {
-            return self == 0 ? 1 : self * (self - 1).factorial
-    }
+    var factorial: Int { return self == 0 ? 1 : self * (self - 1).factorial }
 }

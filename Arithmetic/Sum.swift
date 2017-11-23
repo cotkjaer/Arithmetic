@@ -7,7 +7,7 @@
 //
 
 
-public func sum<T: IntegerArithmetic>(_ vs: T...) -> T where T:ExpressibleByIntegerLiteral
+public func sum<T: BinaryInteger>(_ vs: T...) -> T //where T:ExpressibleByIntegerLiteral
 {
     return vs.reduce(0) { return $0 + $1 }
 }

@@ -17,7 +17,7 @@ public protocol FormattableFloatingPointType : FloatingPoint
 
 extension NumberFormatter
 {
-    convenience init(decimalNumberWithFractionDigits fractionDigits: Int)
+    public convenience init(decimalNumberWithFractionDigits fractionDigits: Int)
     {
         self.init()
         numberStyle = .decimal
@@ -41,6 +41,7 @@ extension Float : FormattableFloatingPointType
         return NumberFormatter(decimalNumberWithFractionDigits: fractionDigits).string(from: NSNumber(value: self)) ?? String(self)
     }
 }
+
 extension Double : FormattableFloatingPointType
 {
     public func formatted(_ fractionDigits: Int = 4) -> String

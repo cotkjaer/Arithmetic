@@ -6,7 +6,8 @@
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
 //
 
-public protocol Remainderable
-{
-    static func % (lhs: Self, rhs: Self) -> Self
-}
+//public protocol Remainderable
+//{
+//    static func % (lhs: Self, rhs: Self) -> Self
+//}
+

@@ -8,22 +8,20 @@
 
 // MARK: - Powerable
 
-public protocol Powerable //: FloatingPointArithmeticType
+public protocol Powerable
 {
     static func ** (left: Self, right: Self) -> Self
 
     func pow(_ rhs: Self) -> Self
 }
 
-infix operator ** : MultiplicationPrecedence//{ associativity left precedence 160 }
+infix operator ** : MultiplicationPrecedence
 
 public func ** <F: Powerable>(left: F, right: F) -> F { return left.pow(right) }
 
-infix operator **= : AssignmentPrecedence//{ associativity right precedence 90 }
+infix operator **= : AssignmentPrecedence
 
 public func **= <F: Powerable>(left: inout F, right: F) { left = left ** right }
-
-
 
 public func pow<F: Powerable>(_ lhs: F, _ rhs: F) -> F
 {
@@ -38,7 +36,6 @@ public func ** (left: Double, right: Double) -> Double { return pow(left, right)
 
 extension Double : Powerable
 {
-    
     public func pow(_ rhs: Double) -> Double
     {
         return Foundation.pow(self, rhs)
@@ -51,7 +48,6 @@ public func ** (left: Float, right: Float) -> Float { return powf(left, right) }
 
 extension Float : Powerable
 {
-    
     public func pow(_ rhs: Float) -> Float
     {
         return Foundation.powf(self, rhs)

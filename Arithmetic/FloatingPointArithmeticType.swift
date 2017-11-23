@@ -6,12 +6,12 @@
 //  Copyright © 2016 Christian Otkjær. All rights reserved.
 //
 
-public protocol FloatingPointArithmeticType : FloatingPoint, ArithmeticType, IntegerConvertible, Squarable, Roundable, ExpressibleByFloatLiteral, FuzzyEquatable, Powerable, SignedNumber
+public protocol FloatingPointArithmeticType : FloatingPoint, ArithmeticType, IntegerConvertible, ExpressibleByFloatLiteral, Squarable//, Roundable, , Powerable//, FuzzyEquatable, Powerable
 {
     // MARK: - Constants
     
     /// The smallest `Self` where `Self(1) + Self.epsilon != Self(1)`
-    static var epsilon : Self { get }
+//    static var epsilon : Self { get }
     
     static var 𝑒 : Self { get }
     
@@ -22,11 +22,26 @@ public protocol FloatingPointArithmeticType : FloatingPoint, ArithmeticType, Int
     static var π_4 : Self { get }
     static var π_8 : Self { get }
     
-    func equalTo(_ number: Self, within precision: Self) -> Bool
+//    func equalTo(_ number: Self, within precision: Self) -> Bool
 }
 
-extension Float : FloatingPointArithmeticType {}
-extension Double : FloatingPointArithmeticType {}
+extension Float : FloatingPointArithmeticType {
+    
+//    public static var epsilon: Float {
+//        return Float.ulpOfOne
+//    }
+//
+//    public func equalTo(_ number: Float, within precision: Float) -> Bool {
+//        return abs(self - number) <= abs(precision)
+//    }
+}
+extension Double : FloatingPointArithmeticType {
+    
+//    public func equalTo(_ number: Double, within precision: Double) -> Bool
+//    {
+//        return abs(self - number) <= abs(precision)
+//    }
+}
 
 // MARK: - Constants
 

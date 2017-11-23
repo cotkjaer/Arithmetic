@@ -15,19 +15,20 @@ class IntTests: XCTestCase
     {
         let negative10 = -10
         
-        XCTAssert(negative10.even)
-        XCTAssert(2.even)
-        XCTAssert(0.even)
-        XCTAssertFalse(129398121.even)
+        XCTAssert(negative10.isEven)
+        XCTAssert(2.isEven)
+        XCTAssert(0.isEven)
+        XCTAssertFalse(129398121.isEven)
     }
     
     func test_odd()
     {
         let negativeFive = -5
         
-        XCTAssert(negativeFive.odd)
-        XCTAssert((-71).odd)
-        XCTAssertFalse(80.odd)
-        XCTAssertFalse(0.odd)
+        XCTAssert(negativeFive.isOdd)
+        XCTAssert((-71).isOdd)
+        XCTAssertFalse(80.isOdd)
+        XCTAssertFalse(0.isOdd)
+        XCTAssertFalse((-2).isOdd)
     }
 }

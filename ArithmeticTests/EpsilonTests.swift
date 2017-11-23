@@ -13,21 +13,21 @@ class EpsilonTests: XCTestCase
 {
     func test_Double_epsilon()
     {
-        XCTAssertGreaterThan(Double.epsilon, 0)
+        XCTAssertGreaterThan(Double.ulpOfOne, 0)
         
         let one = Double(1)
         
-        XCTAssertGreaterThan(one + Double.epsilon, one)
-        XCTAssert(one + Double.epsilon * 0.5 == one)
+        XCTAssertGreaterThan(one + Double.ulpOfOne, one)
+        XCTAssert(one + Double.ulpOfOne * 0.5 == one)
     }
     
     func test_Float_epsilon()
     {
-        XCTAssertGreaterThan(Float.epsilon, 0)
+        XCTAssertGreaterThan(Float.ulpOfOne, 0)
         
         let one = Float(1)
         
-        XCTAssertGreaterThan(one + Float.epsilon, one)
-        XCTAssert(one + Float.epsilon * 0.5 == one)
+        XCTAssertGreaterThan(one + Float.ulpOfOne, one)
+        XCTAssert(one + Float.ulpOfOne * 0.5 == one)
     }    
 }

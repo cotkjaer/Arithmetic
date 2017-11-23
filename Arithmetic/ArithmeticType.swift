@@ -6,7 +6,7 @@
 //  Copyright © 2015 Christian Otkjær. All rights reserved.
 //
 
-public protocol ArithmeticType: Subtractable, Addable, Multipliable, Dividable, Remainderable, Comparable, SignedNumber, AbsoluteValuable
+public protocol ArithmeticType: Subtractable, Addable, Multipliable, Dividable//, Remainderable//, SignedNumeric & Comparable
 {
     init() // Zero
     static prefix func + (_:Self) -> Self
@@ -14,4 +14,5 @@ public protocol ArithmeticType: Subtractable, Addable, Multipliable, Dividable, 
 }
 
 extension Int: ArithmeticType {}
-extension UInt: ArithmeticType {}
+//extension UInt: ArithmeticType {}
+

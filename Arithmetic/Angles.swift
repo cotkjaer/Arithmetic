@@ -126,7 +126,7 @@ as would be more satisfactory in a purely mathematical view.
 
 public func normalizeAngle<F:FloatingPointArithmeticType>(_ φ : F, _ Φ: F = F.π) -> F
 {
-    let a = ((φ + F.π - Φ) / F.π2).floor
+    let a = floor((φ + F.π - Φ) / F.π2)
     return φ - F.π2 * a
 }
 
@@ -134,7 +134,7 @@ public func normalizeAngle<F:FloatingPointArithmeticType>(_ φ : F, _ Φ: F = F.
 
 public func normalizeRadians<F:FloatingPointArithmeticType>(_ φ: F) -> F
 {
-    return φ - ( φ / F.π2 - 0.5 ).ceil * F.π2
+    return φ - ceil( φ / F.π2 - 0.5 ) * F.π2
 }
 
 /// Transform degrees to radians
@@ -173,10 +173,10 @@ public extension FloatingPointArithmeticType
         if φ == 0
         {
             /// Normalizes angle to be in ]-π;π]
-            return self - ( self / Self.π2 - 0.5 ).ceil * Self.π2
+            return self - ceil( self / Self.π2 - 0.5 ) * Self.π2
         }
         
-        let a = ((self + Self.π - φ) / Self.π2).floor
+        let a = floor((self + Self.π - φ) / Self.π2)
         return self - Self.π2 * a
     }
 }
